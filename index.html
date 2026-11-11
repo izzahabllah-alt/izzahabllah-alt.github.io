@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning Materials</title>
+  <style>
+    :root {
+      --red: #D0312D;       /* main red */
+      --red-dark: #A82420;  /* hover red */
+      --blue: #2F7DB6;      /* main blue */
+      --navy: #1E4E79;      /* dark blue */
+      --light: #F4F7FA;     /* page background */
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--light);
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Top banner */
+    header {
+      background: var(--red);
+      color: #fff;
+      padding: 40px 20px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::after {           /* blue wave strip at bottom */
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      height: 10px;
+      background: var(--blue);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    header p { margin: 6px 0 0; font-size: 17px; opacity: 0.95; }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      color: var(--navy);
+      font-size: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 3px solid var(--red);
+      display: inline-block;
+      padding-bottom: 4px;
+      margin-bottom: 20px;
+    }
+
+    ul { list-style: none; padding: 0; margin: 0; }
+    li { margin: 14px 0; }
+
+    a.card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      border-left: 6px solid var(--blue);
+      border-radius: 6px;
+      padding: 18px 22px;
+      text-decoration: none;
+      color: var(--navy);
+      font-weight: bold;
+      font-size: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      transition: all 0.2s;
+    }
+    a.card span.desc {
+      display: block;
+      font-weight: normal;
+      color: #555;
+      font-size: 14px;
+    }
+    a.card span.btn {
+      background: var(--red);
+      color: #fff;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-radius: 4px;
+      white-space: nowrap;
+      margin-left: 15px;
+    }
+    a.card:hover {
+      border-left-color: var(--red);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    }
+    a.card:hover span.btn { background: var(--red-dark); }
+
+    footer {
+      text-align: center;
+      color: #fff;
+      background: var(--navy);
+      padding: 16px;
+      font-size: 14px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Learning Materials</h1>
+    <p>Click a topic below to open it</p>
+  </header>
+
+  <main>
+    <h2>Topics</h2>
+    <ul>
+      <li>
+        <a class="card" href="StringsExceptionsFiles(protected).html">
+          <div>
+            Strings, Exceptions &amp; Files
+            <span class="desc">Lesson page</span>
+          </div>
+          <span class="btn">Open</span>
+        </a>
+      </li>
+      <!-- To add another page: copy the <li> ... </li> block above,
+           paste it here, then change the href (file name), title and description. -->
+    </ul>
+  </main>
+
+  <footer>
+    Prepared by Izzah
+  </footer>
+
+</body>
+</html>
